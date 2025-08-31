@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/08/28 21:41:23.000.189,C:\Users\J\Documents\Embarcadero\Studio\Projets\ConnexionPlugin.dproj=C:\Users\J\Documents\Embarcadero\Studio\Projets\Project1.dproj</Transaction>
+    <Transaction>2025/08/28 21:41:42.000.081,C:\GSH\ConnexionPlugin.dproj=C:\Users\J\Documents\Embarcadero\Studio\Projets\ConnexionPlugin.dproj</Transaction>
+    <Transaction>2025/08/28 21:42:53.000.169,=C:\GSH\Unit1.pas</Transaction>
+    <Transaction>2025/08/28 21:47:18.000.262,=C:\GSH\PluginConnexionWizard.pas</Transaction>
+  </Transactions>
+</BorlandProject>
