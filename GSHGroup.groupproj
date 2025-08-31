@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{16EF12A1-4492-4184-A286-73D7F01BDC34}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="GSH.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ConnexionPlugin.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="GSH">
+        <MSBuild Projects="GSH.dproj"/>
+    </Target>
+    <Target Name="GSH:Clean">
+        <MSBuild Projects="GSH.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GSH:Make">
+        <MSBuild Projects="GSH.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ConnexionPlugin">
+        <MSBuild Projects="ConnexionPlugin.dproj"/>
+    </Target>
+    <Target Name="ConnexionPlugin:Clean">
+        <MSBuild Projects="ConnexionPlugin.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ConnexionPlugin:Make">
+        <MSBuild Projects="ConnexionPlugin.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="GSH;ConnexionPlugin"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="GSH:Clean;ConnexionPlugin:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="GSH:Make;ConnexionPlugin:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
